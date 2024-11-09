@@ -10,7 +10,7 @@ html, body {
 
 @font-face {
     font-family: 'inter';
-    src: url('/inter.ttf') format('truetype');
+    src: url('inter.ttf') format('truetype');
 }
 
 body {
