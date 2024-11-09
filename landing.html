@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/trashtoll.ico" type="image/x-icon">
+    <title>Trashtoll Pay</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/landing.css">
+    <link rel="icon" type="image/png" href="/appicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/appicons/favicon.svg" />
+    <link rel="shortcut icon" href="/appicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/appicons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Trashtoll Pay" />
+    <link rel="manifest" href="/appicons/site.webmanifest">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <img src="/img/trashtoll-header.svg" alt="trashtoll-header" onclick="redirectTo('/')">
+            <div class="middle">
+                <div class="nav-holder">
+                    <div class="nav">
+                        <p class="white">Features</p>
+                        <p class="white">Locations</p>
+                        <p class="white">FAQs</p>
+                    </div>
+                </div>
+            </div>
+            <div class="icon-container" id="userIcon">
+                <div>
+                    <img src="/img/user.svg" alt="user">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="main-container">
+            <div class="text">
+                <div class="text-container">
+                    <div class="texts">
+                        <p class="white title">Pay your tolls with trash</p>
+                        <p class="white">Reduce waste and earn rewards with Trashtoll Pay - converting bottles and cans into EasyTrip credits.</p>
+                        <div class="find-button">
+                            <div>
+                                <p class="blueText medium">Find a Machine nearby</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="road">
+        <img src="/img/background.svg" alt="background" class="background">
+        <img src="/img/car.svg" alt="car" class="car">
+        <img src="/img/foreground.svg" alt="foreground" class="foreground">
+    </div>
+
+    <div class="content-container">
+        <div class="content">
+            <h2 class="white center htext">We understand the problem. The rising demand for convenience has created a significant waste issue. <span class="yellow"> Single-use bottles and cans</span> are filling our landfills. These materials are recyclable, but <span class="yellow">recycling options remain limited</span>, especially for drivers. And we want to fill in that gap.</h2>
+
+            <div class="solution">
+                <div class="solution-container">
+                    <p class="white medium">Our Solution: Trashtoll Pay</p>
+                    <h2 class="white medium">How Trashtoll Pay works?</h2>
+                    <div class="steps">
+                        <div class="step-container">
+                            <div class="step">
+                                <img src="/img/step.svg" alt="">
+                                <div class="text">
+                                    <p class="white">Step 1</p>
+                                    <h4 class="yellow semiBold">Drop</h4>
+                                    <p class="white">Place your bottles or cans into the Trashtoll Pay machine.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <img src="/img/step.svg" alt="">
+                                <div class="text">
+                                    <p class="white">Step 1</p>
+                                    <h4 class="yellow semiBold">Convert</h4>
+                                    <p class="white">The machine calculates your toll credits based on the items deposited</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <img src="/img/step.svg" alt="">
+                                <div class="text">
+                                    <p class="white">Step 1</p>
+                                    <h4 class="yellow semiBold">Drop</h4>
+                                    <p class="white">Place your bottles or cans into the Trashtoll Pay machine.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="video">
+                <div class="vtext-container">
+                    <h2 class="yellow semiBold center">We’ve designed Trashtoll Pay with drivers in mind</h2>
+                    <p class="white">Our machines are positioned conveniently along expressways and common roads so you can recycle on the go.</p>
+                </div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/PkLkiLyySDU?si=bEn94UfzYoHThtMh&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+        </div>
+   
+    </div>
+
+
+
+    <script>
+        // Select the car element
+        const car = document.querySelector('.road .car');
+
+        // Listen for the scroll event
+        window.addEventListener('scroll', () => {
+            // Get the scroll position
+            const scrollPosition = window.scrollY;
+
+            // Adjust the movement speed of the car
+            const carPosition = scrollPosition * 1; // Adjust multiplier for speed
+
+            // Calculate the percentage to subtract
+            const subtractPercentage = 30; // percentage to subtract
+            const viewportWidth = window.innerWidth; // Get the viewport width
+            const subtractPixels = (subtractPercentage / 100) * viewportWidth; // Convert percentage to pixels
+
+            // Set the car's new position to the right, adjusted by the percentage
+            car.style.left = `${carPosition - subtractPixels}px`; // Apply subtraction
+        });
+
+        // Initialize a click counter
+        let clickCount = 0;
+
+        // Add an event listener for the click event on the user icon
+        document.getElementById('userIcon').addEventListener('click', function() {
+            // Increment the click count each time the icon is clicked
+            clickCount++;
+
+            // If clicked 3 times, redirect to /admin
+            if (clickCount === 3) {
+                window.location.href = '/admin';
+            }
+        });
+    </script>
+    <script src="/js/script.js"></script>
+</body>
+</html>

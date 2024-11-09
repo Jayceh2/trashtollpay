@@ -1,0 +1,192 @@
+html, body {
+    overflow: visible;
+    contain: paint;
+}
+
+body {
+    height: 10000px;
+}
+
+.main {
+    display: flex;
+    width: 100%;
+    height: 525px;
+    flex-direction: column;
+    align-items: center;
+    gap: 200px;
+    flex-shrink: 0;
+
+    padding-top: 68px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 56px;
+    align-self: stretch;
+}
+
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 161px;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+.text-container .texts {
+    text-align: center;
+
+    display: flex;
+    width: 514px;
+    max-width: 600px;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.find-button {
+    display: flex;
+    height: 56px;
+    padding: 0px var(--spacing-8, 64px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border-radius: 32px;
+    border: 1px solid var(--color-secondary-opacity-16, rgba(255, 255, 255, 0.16));
+    background: var(--color-tertiary-600, #FFCB5F);
+    backdrop-filter: blur(2px);
+}
+
+.find-button:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.road {
+    position: relative;
+    width: 100%;
+}
+
+.road img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 286.563px;
+    
+    left: -27.53%;
+}
+
+.road img.car {
+    left: -30%;
+    transition: left 0.1s ease-out; /* Smooth movement */
+}
+
+.content-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.content {
+    padding-top: 505px;
+
+    display: flex;
+    width: 1248px;
+    flex-direction: column;
+    gap: 232px;
+}
+
+.htext {
+    max-width: 1200px;
+
+    align-self: center;
+}
+
+.solution {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 128px;
+    align-self: stretch;
+}
+
+.solution-container {
+    display: flex;
+    min-width: 250px;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    align-self: stretch;
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.step-container {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 24px;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+.step {
+    display: flex;
+    height: 444px;
+    min-width: 250px;
+    max-width: 1240px;
+    padding: 41px 32px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex: 1 0 0;
+
+    border-radius: 32px;
+    background: var(--color-secondary-opacity-8, rgba(255, 255, 255, 0.08));
+}
+
+.step .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    align-self: stretch;
+}
+
+.video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    align-self: stretch;
+}
+
+.video .vtext-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    align-self: stretch;
+}
